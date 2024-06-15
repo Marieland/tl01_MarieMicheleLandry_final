@@ -1,0 +1,112 @@
+.header__logo {
+  font-size: 4rem;
+  line-height: 4.2rem;
+  color: #222;
+  font-weight: 400;
+}
+
+.header__msg-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap:1rem;
+  padding : 1rem 1rem;
+  background-color: #002D73;
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+
+.header__content {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+  height: 0;
+  transform: translateY(3rem);
+}
+
+.header__left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header__right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__nav--mobile {
+  height: 100%;
+  max-width: min(30rem, calc(100% - 3rem));/*Nous obtiendrons donc toujours la plus petite grandeur entre les deux grandeurs précisées*/
+  background-color: white;
+}
+
+.dialog[open] .header__nav--mobile {
+  animation: slideInLeft 0.4s forwards;
+}
+
+.dialog[closing] .header__nav--mobile {
+  animation: slideOutLeft 0.4s forwards;
+}
+
+.header__nav--mobile .nav__items {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 1rem;
+  height: 100%;
+  position: relative;
+}
+
+.nav__header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #002D73;
+  padding: 1rem;
+  color: white;
+  font-weight: 900;
+}
+
+.nav__items {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+}
+
+.nav__items a {
+  font-weight: 800;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s ease-out;
+}
+
+.nav__items a:hover {
+  border-bottom: 2px solid #222;
+}
+
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: flex;
+  }
+
+  .header__menu-icon {
+    display: none;
+  }
+
+  .header__nav--mobile.visible {
+    display: none;
+  }
+}

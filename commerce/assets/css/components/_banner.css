@@ -1,0 +1,60 @@
+.banner{
+    display:flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    padding: 2rem;
+}
+
+.banner__left{
+    display: flex;
+    justify-content: center;
+    /*width: 50%;*/
+    order:2; 
+}
+
+.banner__content{
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    gap:1rem;
+
+}
+
+.banner__right{
+    display: flex;
+    justify-content: center;/*Afin de s'assurer que notre image soit toujours centrée peut importe sa taille*/
+    order:1;
+}
+
+.banner__img{
+    /*Lorsqu'on veut que notre image puisse être redimensionné sur la largeur, on doit mettre modifié son max-width: et aussi lui demander de prendre 100% de l'espace disponible*/
+    max-width: min(100%,450px);/*960px étant la grandeur maximale du fichier d'image. Ici l'image mesure 960x960*/
+    width: 100%;
+    height: auto;
+    padding-top:1rem;
+    justify-content: center;
+}
+
+@media screen and (min-width:768px) {
+    .banner{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .banner__left{
+        order:1;
+        align-items: center;
+        width: 50%;
+    }
+
+    .banner__right{
+        order:2;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .banner__img{
+        min-width: 300px;
+    }
+}

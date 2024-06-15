@@ -1,0 +1,8 @@
+.footer{
+background-color: #002D73;
+display: flex;
+justify-content: center;
+gap:1rem;
+
+color:white;
+}

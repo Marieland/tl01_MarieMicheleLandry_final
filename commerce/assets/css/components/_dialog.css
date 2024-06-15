@@ -1,0 +1,37 @@
+/*body:has(.dialog[open]) {
+  overflow-y: hidden;
+}
+
+.dialog {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.dialog[open] {
+  animation: fadeIn 0.2s forwards;
+  display: block;
+}
+
+.dialog[closing] {
+  animation: fadeOut 0.2s forwards;
+}
+*/
+
+.dialog{
+  display: none;
+  position:fixed;
+  top:0;
+  left:0;
+  background-color:rgba(0, 0,0, 0.5);/*0,5 est l'alpha qui gère l'opacité*/
+  width:100dvw;/*dvw signifie dynamique view_width et est préférable lorsqu'on travaille une acétate. Prends en conséquence certains contrôle d'un appareil mobile.*/
+  height:100dvh;
+}
+
+.dialog[open]{
+  display: block;
+}
