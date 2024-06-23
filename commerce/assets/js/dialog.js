@@ -1,10 +1,13 @@
 /*  on veut sélectionner tous les boutons qui ont un attribut data dialog.
     On déclare une variable qui permet de sélectionner tous les boutons (balise 'button') qui ont l'attribut data-dialog.*/ 
 
-    const btnDialogTrigger = document.querySelectorAll('button[data-dialog]'); 
+/** indentation */
+const btnDialogTrigger = document.querySelectorAll('button[data-dialog]'); 
     
 /*Permet de sélectionner tous les éléments qui possèdent la classe dialog, dans ce cas ci dialog c'est notre overlay*/ 
-    const dialogs = document.querySelectorAll('.dialog'); 
+
+/** indentation */
+const dialogs = document.querySelectorAll('.dialog'); 
 
 /*console.log(btnDialogTrigger); /*Afin de vérifier si une node list nous est bien retournée.*/
 /* Lorsqu'on utilise le queryselectorall, nous obtenons un tableau, il faudra donc boucler dans le tableau avant d'utiliser l'écouteur d'événements.*/ 
@@ -18,7 +21,7 @@ btnDialogTrigger.forEach((btn)=>{
     btn.addEventListener('click', ()=>{
         const dialogSelector = btn.getAttribute('data-dialog');
         const dialog = document.querySelector(dialogSelector);
-        console.log(dialog);
+        /** extra code */
 
         if(dialog){
             if(dialog.checkVisibility()){
